@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>My Rick</title>
+</head>
+<body>
+    <div id="app">
+            <div class="divCharacters">
+
+                <ul v-for="(el, index) in results" class="characters">
+                    <div id="index">{{index}}</div>
+                    <img :src="el.image" class="avatar"/>
+                    <li>{{el.name}} ({{el.status}})</li>
+                    <br>
+                </ul>
+            <br>
+            </div>
+        <!-- <button v-on:click="getAllCharacters()">Get all</button> -->
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
